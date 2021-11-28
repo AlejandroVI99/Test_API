@@ -9,7 +9,7 @@ require 'csv'
 Restaurant.create({rating:'4', name:'prueba', site:'prueba',email:'prueba',phone:'prueba', street:'prueba',city:'prueba',
 									state:'prueba', lat:'prueba', lng:'prueba'})
 
-
+#Lines of code to read all csv files and import all the data to the database
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'restaurantes.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 csv.each do |row|

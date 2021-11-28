@@ -2,6 +2,7 @@
 module Api
 	module V1
 		class RestaurantsController < ApplicationController
+			#method to show all the restaurants
 			def index
 				@restaurants = Restaurant.all
 				render json:{
@@ -15,6 +16,7 @@ module Api
 				@restaurant = Restaurant.new
 			end
 
+			#method to create a new restaurant
 			def create
 				@restaurant = Restaurant.create(restaurant_params)
 				if @restaurant.save
@@ -33,6 +35,7 @@ module Api
 
 			end
 
+			#method to updated data of a restaurant
 			def update
 				set_restaurant
 				if @restaurant.update(restaurant_params)
@@ -50,6 +53,7 @@ module Api
 				end
 			end
 			
+			#method to delete a restaurant 
 			def destroy
 				set_restaurant
 				if @restaurant.destroy
@@ -69,6 +73,7 @@ module Api
 
 
 #---------------------------------------------------------------
+			#methods to do all the statistics operations
 			def statistics(latitude = params['latitude'].to_f,longitude = params['longitude'].to_f,z= params['z'].to_f)
 				restaurant_loop(latitude,longitude,z)
 				render json:{
@@ -109,7 +114,6 @@ module Api
 			
 	#-----------------------------------------------------------------	
 			
-
 			def set_restaurant
 				@restaurant = Restaurant.find(params[:id])
 			end
