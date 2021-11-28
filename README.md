@@ -5,6 +5,10 @@ application up and running.
 
 Things you may want to cover:
 
+* Heroku app: https://test-restaurants-api-2021.herokuapp.com/api/v1/restaurants/
+
+* Heroku statistics link: https://test-restaurants-api-2021.herokuapp.com/api/v1/statistics?latitude=19.437768497719&longitude=-99.1286486584673&z=0.0005
+
 * Ruby version 3.0.1
 
 * How to run the test suite
