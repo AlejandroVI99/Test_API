@@ -22,3 +22,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+https://gist.github.com/arjunvenkat/1115bc41bf395a162084 import data of an csv to database
+https://andycroll.com/ruby/calculate-the-standard-deviation-of-a-ruby-array/ statistics operations
